@@ -3,6 +3,8 @@
 /Logs/
 /Packages/
 /Usersettings/
-
+Assembly-CSharp-Editor-firstpass.csproj
+Assembly-CSharp.csproj
+PhysicsProject.sln
 .vs/
 .vscode/
