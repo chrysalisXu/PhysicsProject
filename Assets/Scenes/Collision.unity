@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   springCoefficient: 100
+  dampingCoefficient: 1
   HalfSideLength: 20
   FixPos: 3
   mass: 10

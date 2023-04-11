@@ -28,6 +28,8 @@ namespace ClothPhysics
     {
         [Tooltip("spring constant")]
         public float springCoefficient;
+        [Tooltip("damping constant")]
+        public float dampingCoefficient;
         [Tooltip("Vertices number per edge / 2")]
         public int HalfSideLength;
         [Tooltip("whether fixed")]
@@ -186,6 +188,9 @@ namespace ClothPhysics
         }
 
         private void UpdateVelocity(){
+            Vector3[] LastVelocities = new Vector3[ClothMesh.vertices.Length];
+            Array.Copy(Velocities, LastVelocities, ClothMesh.vertices.Length);
+
             // add gravity
             for (int i = 0; i < Velocities.Length; i++){
                 Velocities[i].y -= PhysicsEngine.Instance.GravityConstant * PhysicsEngine.Instance.TimeStep;
@@ -195,7 +200,10 @@ namespace ClothPhysics
             for (int i=0; i<Springs.Length; i++){
                 // for v1 to v2
                 Vector3 vector = Vertices[Springs[i].V2] - Vertices[Springs[i].V1];
-                float velocityChange = (vector.magnitude - Springs[i].originalLength) * springCoefficient / VerticesMass * PhysicsEngine.Instance.TimeStep;
+                Vector3 relativeVelocity = LastVelocities[Springs[i].V2] - LastVelocities[Springs[i].V1];
+                float velocityChange = (vector.magnitude - Springs[i].originalLength) * springCoefficient;
+                velocityChange += Vector3.Dot(relativeVelocity, vector.normalized) * dampingCoefficient;
+                velocityChange = velocityChange / VerticesMass * PhysicsEngine.Instance.TimeStep;
                 Velocities[Springs[i].V1] += velocityChange * vector.normalized;
                 Velocities[Springs[i].V2] -= velocityChange * vector.normalized;
                 Springs[i].originalLength += (vector.magnitude - Springs[i].originalLength) * plasticity;
