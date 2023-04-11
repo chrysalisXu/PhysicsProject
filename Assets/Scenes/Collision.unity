@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springCoefficient: 100
   HalfSideLength: 20
-  FixPos: 0
+  FixPos: 3
   mass: 10
   plasticity: 0
 --- !u!23 &116949236
@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086847188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: -2, y: 5, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
