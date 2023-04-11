@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Collision.unity
+    guid: e6417cc6b910db74cbcae7c75b74b38b
+  - enabled: 1
+    path: Assets/Scenes/FlagAndWind.unity
+    guid: 0a77de1da94d76e47904c5927dcdecc9
+  - enabled: 1
+    path: Assets/Scenes/Plastic.unity
+    guid: f334ec10c9f99c6448b2f9dca1d9ef6f
   m_configObjects: {}
