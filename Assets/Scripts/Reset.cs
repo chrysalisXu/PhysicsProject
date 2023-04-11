@@ -14,8 +14,17 @@ public class Reset : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            // Press ESC to quit
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            print("Quit!");
         }
     }
 
