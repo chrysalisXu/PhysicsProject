@@ -59,8 +59,8 @@ namespace ClothPhysics
 
         void Update(){
             Vertices = ClothMesh.vertices;
-            UpdatePosition();
             UpdateVelocity();
+            UpdatePosition();
             HandleCollision();
             ClothMesh.vertices = Vertices;
         }
