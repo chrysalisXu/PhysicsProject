@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   springCoefficient: 100
+  dampingCoefficient: 0
   HalfSideLength: 20
   FixPos: 2
   mass: 20
@@ -804,8 +805,8 @@ MonoBehaviour:
     3. Reset: R /
     Reset Button
 
-    4. Change scene: Next Button, in Plasitic scene, click ''Back
-    to 1st'' to jump to Collision scene.
+    4. Change scene: N / Next Button, in Plasitic scene, click
+    ''Back to 1st'' to jump to Collision scene.
 
     5. Quit: ESC / Quit Button'
   m_isRightToLeft: 0
