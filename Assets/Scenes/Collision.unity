@@ -156,11 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   springCoefficient: 100
-<<<<<<< Updated upstream
   dampingCoefficient: 1
-=======
-  dampingCoefficient: 0
->>>>>>> Stashed changes
   HalfSideLength: 20
   FixPos: 3
   mass: 10
